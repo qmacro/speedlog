@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+docker run \
+  --name speedtest \
+  --detach \
+  --rm \
+  --volume "$PWD":/root/speedtest/ \
+  speedtest
