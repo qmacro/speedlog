@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+# Simple monitoring of the Speedtest log output, with time and download/upload bandwidth
+# I seem to have to set the TZ the "wrong way" (currently BST, which is UTC+1 not UTC-1).
+
+TZ=UTC-1
+tail -f speedtest.dat \
+  | jq -r -f monitor.jq
